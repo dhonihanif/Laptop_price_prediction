@@ -352,8 +352,14 @@ elif option == "Model Building":
     Mean Squared Error : {mse*100:.1f} %\n
     Root Mean Squared Error : {rmse*100:.1f} %\n
     Mean Absolute Percentage Error : {mape*100:.1f} %\n
-    Some explanation about this model get high like below:
+    How about feature importances? which feature that explained the most?
+    here the feature importances from this model :
     """)
+    st.image("./Laptop_price_predictions/image/no27.png")
+    st.write(f"""
+    As we can see, the most affect the model is feature cpu and the feature
+    that no affect the model is Operating System.
+    \nSome explanation about this model like below.""")
     st.image("./Laptop_price_predictions/image/no26.png")
 
 elif option == "Predict":
