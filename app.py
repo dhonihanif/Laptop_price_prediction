@@ -18,7 +18,7 @@ def model(csv):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.2, random_state=42)
 
     # Load model
-    model = pickle.load(open("./Laptop_price_predictions/tree.pkl", "rb"))
+    model = pickle.load(open("./Laptop_price_predictions/tree.sav", "rb"))
     
     # evaluation
     y_pred = model.predict(X_test)
