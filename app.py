@@ -45,12 +45,26 @@ option = st.sidebar.selectbox(
 )
 
 if option == "Home" or option == "":
-    st.write("""# Halaman Utama""") #menampilkan halaman utama
+    st.write("""# Home Page""") #menampilkan halaman utama
     st.write()
     st.markdown("**This is my second app in streamlit**")
     st.write("This website is about build project about laptop predictions")
-    st.image("https://dhonihanif.netlify.app/doni.jpeg", width=200)
-
+    col1, col2 = st.columns(2)
+    with col1:
+        st.image("https://dhonihanif.netlify.app/doni.jpeg", width=200)
+    with col2:
+        st.write(f"""
+        Name : Dhoni Hanif Supriyadi\n
+        Birth : 27 November 2001\n
+        Degree : Bachelor degree start from 2020 until 2024\n
+        Lasted GPA : 3.97 from 4.00\n
+        University : University of Bina Sarana Informatika\n
+        Field : Information System\n
+        Linkedin : http://bit.ly/3x72z9F \n
+        Github : https://github.com/dhonihanif \n
+        Email : dhonihanif354@gmail.com \n
+        Phone : +62895326168335
+        """)
 
 elif option == "Dataframe":
     st.write("""## Dataframe""") #menampilkan judul halaman dataframe
