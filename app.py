@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import joblib
+from keras.models import load_model
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error, mean_absolute_percentage_error
@@ -18,7 +18,7 @@ def model(csv):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.2, random_state=42)
 
     # Load model
-    model = joblib.load("./Laptop_price_predictions/tree.pkl")
+    model = load_model("./Laptop_price_predictions/tree.h5")
     
     # evaluation
     y_pred = model.predict(X_test)
