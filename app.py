@@ -45,7 +45,7 @@ option = st.sidebar.selectbox(
 )
 
 if option == "Home" or option == "":
-    st.write("""# Home Page""") #menampilkan halaman utama
+    st.write("""# Laptop Price Prediction""") #menampilkan halaman utama
     st.write()
     st.markdown("**This is my second app in streamlit**")
     st.write("This website is about build project about laptop predictions")
